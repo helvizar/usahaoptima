@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --primary: #19a7ce;
+  --secondary: #146c94;
+  --bg: #fff;
+  --alternatif: #afd3e2;
+}
+
+main {
+  display: flex;
+  height: auto;
+}
+
+/* Aside Start */
+aside {
+  background-color: var(--bg);
+  width: 20%;
+  height: auto;
+  border-right: 2px solid var(--alternatif);
+}
+
+main aside img.logo {
+  width: 100px;
+}
+
+main aside ul li a {
+  color: var(--primary) !important;
+  font-weight: 500 !important;
+}
+
+/* Aside End */
+
+/* Dashboard Start */
+main section#dashboard {
+  margin-inline: auto;
+}
+
+main section#dashboard header div.dashboard-search {
+  background-color: #f6f1f1;
+  padding: 8px;
+  border-radius: 99px;
+}
+
+main section#dashboard .dashboard-title {
+  font-size: 32px;
+  color: var(--primary);
+}
+
+main section#dashboard .dashboard-title h2 {
+  font-weight: bolder;
+}
+
+main section#dashboard .dashboard-card .card-body {
+  box-shadow: 3px 3px 3px 3px var(--alternatif);
+  border-radius: 12px;
+}
+
+main section#dashboard .dashboard-card h5,
+h6,
+p {
+  color: var(--secondary) !important;
+}
+
+/* Dashboard End */
+
+/* Calender Start */
+#calendar {
+  width: 500px;
+  font-size: 18px;
+  background-color: #f6f1f1;
+  border-radius: 12px;
+  padding: 12px;
+  height: 310px;
+}
+
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number {
+  color: var(--secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  min-height: 0;
+  position: relative;
+}
+
+.fc .fc-button-primary {
+  background-color: var(--secondary);
+  border: none;
+}
+
+.fc .fc-button-primary:hover {
+  background-color: var(--primary);
+  border: none;
+}
+
+/* Calender End */
+
+/* Footer Start */
+main section#dashboard footer .footer-title {
+  color: var(--secondary);
+}
+
+main section#dashboard footer div.icons i {
+  font-size: 24px;
+  margin-right: 8px;
+  color: var(--primary);
+}
