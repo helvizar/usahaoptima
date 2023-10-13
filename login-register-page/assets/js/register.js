@@ -50,6 +50,9 @@ async function fetchDataFromAPI() {
     }
 }
 
+fetchDataFromAPI()
+
+
 async function postDataToAPI(data) {
     try {
         const response = await fetch("https://6527e017931d71583df18810.mockapi.io/user", {
@@ -78,6 +81,11 @@ async function isEmailTaken(email) {
     return value
 }
 
+async function isUsernameTaken(username) {
+    const apiData = await fetchDataFromAPI();
+    const value = apiData.some(user => user.username.toLowerCase() === username);
+    return value
+}
 
 function getFormValue() {
     const formData = new FormData(form);
@@ -116,58 +124,65 @@ form.addEventListener('submit', async (event) => {
     let validate = passwordValidate(getFormValue().password);
     let confirm = passwordConfirm(getFormValue().password, getFormValue().confirmed);
     const email = getFormValue().email.toLowerCase();
+    const username = getFormValue().username.toLowerCase();
 
-    const taken = await isEmailTaken(email);
+    const emailTaken = await isEmailTaken(email);
+    const usernameTaken = await isUsernameTaken(username);
 
-    if (taken === false) {
-        if (validate == true ) {
-            if (confirm == true) {
-                // masukin kondisi kirim form ke api
-                const updatedData = {
-                    username: getFormValue().username,
-                    email: getFormValue().email,
-                    password: getFormValue().password,
-                };
-                const response = await postDataToAPI(updatedData);
-                if (response) {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Sukses!",
-                        text: "Selamat, Anda Berhasil Daftar, Mari Login",
-                      }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.href = 'index.html'; 
-                        }
-                      });;
+    if (usernameTaken === false) {
+        if (emailTaken === false) {
+            if (validate == true ) {
+                if (confirm == true) {
+                    // masukin kondisi kirim form ke api
+                    const updatedData = {
+                        username: getFormValue().username,
+                        email: getFormValue().email,
+                        password: getFormValue().password,
+                    };
+                    const response = await postDataToAPI(updatedData);
+                    if (response) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Sukses!",
+                            text: "Selamat, Anda Berhasil Daftar, Mari Login",
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = 'index.html'; 
+                            }
+                          });;
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Opss...!",
+                            text: "Data Tidak Dapat Tersimpan",
+                          });
+                    }
                 } else {
                     Swal.fire({
                         icon: "error",
-                        title: "Opss...!",
-                        text: "Data Tidak Dapat Tersimpan",
+                        title: "Error Validasi",
+                        text: "Pasword Tidak sama",
                       });
                 }
             } else {
                 Swal.fire({
                     icon: "error",
-                    title: "Error Validasi",
-                    text: "Pasword Tidak sama",
+                    title: "Maaf",
+                    text: "Password Harus berisikan minimal 1 Huruf kapital, angka dan simbol",
                   });
             }
         } else {
             Swal.fire({
                 icon: "error",
                 title: "Maaf",
-                text: "Password Harus berisikan minimal 1 Huruf kapital, angka dan simbol",
+                text: "Email anda sudah terdaftar",
               });
         }
     } else {
         Swal.fire({
             icon: "error",
             title: "Maaf",
-            text: "Email anda sudah terdaftar",
+            text: "User name anda sudah terdaftar",
           });
-    }
-
-    
-    
+    }    
 });
