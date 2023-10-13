@@ -53,7 +53,8 @@ input {
     border-radius: 8px 0px 0px 8px !important;
 }
 
-#toggle-password{
+#toggle-password,
+#toggle-password-confirm{
     background: #F0EFFF !important;
     border: none !important;
     border-radius: 0px 8px 8px 0px !important;
@@ -88,7 +89,7 @@ input {
 
 body::before {
     content: "";
-    background: url('/assets/image/image\ .png') no-repeat center center;
+    background: url('/login-register-page/assets/image/image\ .png') no-repeat center center;
     background-size: contain;
     width: 40%;
     height: 40%;
