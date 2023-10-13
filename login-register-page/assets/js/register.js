@@ -74,8 +74,7 @@ async function postDataToAPI(data) {
 
 async function isEmailTaken(email) {
     const apiData = await fetchDataFromAPI();
-    const value = apiData.some(user => user.email === email);
-    console.log(value)
+    const value = apiData.some(user => user.email.toLowerCase() === email);
     return value
 }
 
@@ -117,47 +116,58 @@ form.addEventListener('submit', async (event) => {
     let validate = passwordValidate(getFormValue().password);
     let confirm = passwordConfirm(getFormValue().password, getFormValue().confirmed);
     const email = getFormValue().email.toLowerCase();
-    await isEmailTaken(email);
 
-    if (validate == true ) {
-        if (confirm == true) {
-            // masukin kondisi kirim form ke api
-            const updatedData = {
-                username: getFormValue().username,
-                email: getFormValue().email,
-                password: getFormValue().password,
-            };
-            const response = await postDataToAPI(updatedData);
-            if (response) {
-                Swal.fire({
-                    icon: "success",
-                    title: "Sukses!",
-                    text: "Selamat, Anda Berhasil Daftar, Mari Login",
-                  }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = 'index.html'; 
-                    }
-                  });;
+    const taken = await isEmailTaken(email);
+
+    if (taken === false) {
+        if (validate == true ) {
+            if (confirm == true) {
+                // masukin kondisi kirim form ke api
+                const updatedData = {
+                    username: getFormValue().username,
+                    email: getFormValue().email,
+                    password: getFormValue().password,
+                };
+                const response = await postDataToAPI(updatedData);
+                if (response) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Sukses!",
+                        text: "Selamat, Anda Berhasil Daftar, Mari Login",
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'index.html'; 
+                        }
+                      });;
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Opss...!",
+                        text: "Data Tidak Dapat Tersimpan",
+                      });
+                }
             } else {
                 Swal.fire({
                     icon: "error",
-                    title: "Opss...!",
-                    text: "Data Tidak Dapat Tersimpan",
+                    title: "Error Validasi",
+                    text: "Pasword Tidak sama",
                   });
             }
         } else {
             Swal.fire({
                 icon: "error",
-                title: "Error Validasi",
-                text: "Pasword Tidak sama",
+                title: "Maaf",
+                text: "Password Harus berisikan minimal 1 Huruf kapital, angka dan simbol",
               });
         }
     } else {
         Swal.fire({
             icon: "error",
             title: "Maaf",
-            text: "Password Harus berisikan minimal 1 Huruf kapital, angka dan simbol",
+            text: "Email anda sudah terdaftar",
           });
     }
+
+    
     
 });
