@@ -32,7 +32,6 @@
                 <form id="form" class="form">
                     <h2>Daftar</h2>
                     <div class="form-group mt-5">
-                        <label for="username"></label>
                         <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
                     </div>
 
@@ -42,7 +41,7 @@
 
                     <div class="form-group mt-5">
                         <div class="input-group">
-                            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password" minlength="8" maxlength="16" required>
                             <div class="input-group-append">
                                 <span class="input-group-text bg-light" id="toggle-password">
                                     <i class="fa fa-eye" id="toggle-icon"></i>
@@ -53,10 +52,10 @@
 
                     <div class="form-group mt-5">
                         <div class="input-group">
-                            <input type="password" class="form-control" id="confirmed" placeholder="Konfirmasi Password" required>
+                            <input type="password" class="form-control" name="confirmed" id="confirmed" placeholder="Konfirmasi Password" minlength="8" maxlength="16"  required>
                             <div class="input-group-append">
-                                <span class="input-group-text bg-light" id="toggle-password">
-                                    <i class="fa fa-eye" id="toggle-icon"></i>
+                                <span class="input-group-text bg-light" id="toggle-password-confirm">
+                                    <i class="fa fa-eye" id="toggle-icon-confirm"></i>
                                 </span>
                             </div>
                         </div>
@@ -93,6 +92,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="assets/js/register.js"></script>
 </body>
 </html>
