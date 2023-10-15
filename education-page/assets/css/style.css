@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --primary: #19a7ce;
+  --secondary: #146c94;
+  --bg: #fff;
+  --alternatif: #afd3e2;
+}
+
+main {
+  display: flex;
+  height: auto;
+}
+
+/* Aside Start */
+aside {
+  background-color: var(--bg);
+  width: 20%;
+  height: auto;
+  border-right: 2px solid var(--alternatif);
+}
+
+main aside img.logo {
+  width: 100px;
+}
+
+main aside ul li a {
+  color: var(--primary) !important;
+  font-weight: 500 !important;
+}
+
+main aside ul li a:hover {
+  color: var(--bg) !important;
+  background-color: var(--secondary);
+}
+
+main aside ul div.aside-dropdown {
+  color: var(--primary);
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+
+main aside ul div.aside-dropdown .aside-list:hover {
+  font-weight: bolder !important;
+}
+
+/* Aside End */
+
+/* Dashboard Start */
+main section#dashboard {
+  margin-inline: auto;
+}
+
+main section#dashboard header div.dashboard-search {
+  background-color: #f6f1f1;
+  padding: 8px;
+  border-radius: 99px;
+}
+
+main section#dashboard .dashboard-title,
+.dashboard-description {
+  font-size: 32px;
+  color: var(--primary);
+}
+
+main section#dashboard .dashboard-title h2,
+.dashboard-description h2 {
+  font-weight: bolder;
+}
+
+main section#dashboard .dashboard-card .card-body {
+  box-shadow: 3px 3px 3px 3px var(--alternatif);
+  border-radius: 12px;
+}
+
+main section#dashboard .dashboard-card h5,
+h6,
+p {
+  color: var(--secondary) !important;
+}
+
+/* Footer Start */
+main section#dashboard footer .footer-title {
+  color: var(--secondary);
+}
+
+main section#dashboard footer div.icons i {
+  font-size: 24px;
+  margin-right: 18px;
+  color: var(--primary);
+}
+
+/* Main container */
+.container.main-container {
+  margin-top: 50px;
+}
+
+/* Section heading */
+
+.edu-section h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 500;
+  max-width: 598px;
+  margin-left: 10px;
+}
+
+/* Highlighted sidebar item */
+main aside ul li.active a {
+  color: var(--bg) !important;
+  background-color: var(--secondary);
+}
+
+/* Edication Start */
+.edu-section h2 {
+  color: var(--primary);
+  font-size: 2.25rem;
+  font-weight: 500;
+  max-width: 766px;
+  margin-left: 10px;
+  margin-top: 20px;
+  height: 100%;
+}
+
+/* Individual education items */
+.edu-item {
+  border: 1px solid var(--primary);
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Education item image */
+.edu-image img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Education item heading */
+.edu-item h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Education item description */
+.edu-item p {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+/* Read more button */
+.edu-item a {
+  color: var(--primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  width: 150px;
+  border: 1px solid var(--primary);
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* Hover effect on the button */
+.edu-item a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Education End */
+
+/* Education Article Start */
+
+.cards {
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: #f6f1f1;
+  display: flex;
+  width: 100%;
+  height: 90%;
+  max-width: 500px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+.card-title {
+  color: var(--primary) !important;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 9px;
+}
+
+.card-body p {
+  text-align: justify;
+}
+
+.color {
+  color: var(--primary);
+}
+
+.pub-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.pub-date span {
+  order: 1;
+}
+
+/* Education Article End */
+
+/* Education Article Page Start */
+
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 70% !important; */
+}
+
+.article-page .color {
+  color: var(--primary) !important;
+}
+
+.article-page p {
+  color: var(--primary) !important;
+}
+
+/* Education Article Page End */
+
+/* Media Query */
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #calendar {
+    width: 95% !important;
+  }
+
+  .fc-today-button {
+    margin-bottom: 12px !important;
+    margin-left: 16px !important;
+  }
+
+  main section#dashboard section.dashboard-title h2,
+  main section#dashboard section.dashboard-title h3 {
+    font-size: 24px !important;
+  }
+
+  main section#dashboard section.dashboard-description {
+    text-align: start !important;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  main section#dashboard footer .footer-title {
+    margin-inline: auto !important;
+  }
+
+  main section#dashboard footer div.icons {
+    margin: 0 auto !important;
+  }
+}
+
+/*`md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  main aside img.logo {
+    width: 50px !important;
+  }
+
+  main aside ul li a span {
+    display: none !important;
+  }
+
+  main section#dashboard header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-list span {
+    display: none !important;
+  }
+
+  main section#dashboard header div.dashboard-search {
+    margin: 12px;
+  }
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+  aside {
+    width: 20%;
+  }
+
+  main aside ul li a svg {
+    display: none;
+  }
+  main aside img.logo {
+    width: 80px;
+  }
+
+  main aside ul li {
+    margin-top: 8px;
+  }
+
+  main aside ul li a span {
+    display: block;
+    text-align: start;
+    margin-top: 6px;
+  }
+
+  .dropdown-list span {
+    display: block;
+    text-align: start;
+    margin-top: 6px;
+  }
+
+  main section#dashboard {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card-body p {
+    text-align: left;
+  }
+}
