@@ -191,34 +191,46 @@ main aside ul li.active a {
 
 /* Education Article Start */
 
-.card-body .title {
+.cards {
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: #f6f1f1;
+  display: flex;
+  width: 100%;
+  height: 90%;
+  max-width: 500px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+.card-title {
   color: var(--primary) !important;
   font-size: 20px;
   font-weight: 500;
-  line-height: 120%;
-  align-self: center;
   margin-top: 9px;
-  margin-left: -5px;
 }
 
-.cards {
-  border-radius: 46px;
-  border: 1px solid black;
-  backdrop-filter: blur(6px);
-  background-color: #f6f1f1;
-  display: flex;
-  margin-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 341px;
-  max-width: 100%;
-  flex-grow: 1;
-  padding: 30px 20px 14px 20px;
-  flex-direction: column;
+.card-body p {
+  text-align: justify;
 }
 
 .color {
   color: var(--primary);
+}
+
+.pub-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.pub-date span {
+  order: 1;
 }
 
 /* Education Article End */
@@ -335,5 +347,9 @@ main aside ul li.active a {
   main section#dashboard {
     width: 100%;
     overflow: hidden;
+  }
+
+  .card-body p {
+    text-align: left;
   }
 }
