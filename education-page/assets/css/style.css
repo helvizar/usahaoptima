@@ -223,6 +223,25 @@ main aside ul li.active a {
 
 /* Education Article End */
 
+/* Education Article Page Start */
+
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 70% !important; */
+}
+
+.article-page .color {
+  color: var(--primary) !important;
+}
+
+.article-page p {
+  color: var(--primary) !important;
+}
+
+/* Education Article Page End */
+
 /* Media Query */
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
