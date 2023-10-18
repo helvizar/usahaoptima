@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Edukasi</title>
 
     <!-- File CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -16,9 +16,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- CDN Full Calender -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
-
     <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
@@ -28,6 +25,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <main>
       <aside>
@@ -40,7 +38,7 @@
             <li class="nav-item mb-2">
               <a
                 class="nav-link collapsed"
-                href="#"
+                href="../dashboard-page/index.html"
                 data-toggle="collapse"
                 data-target="#collapseTwo"
                 aria-expanded="true"
@@ -83,7 +81,7 @@
             </li>
 
             <li
-              class="nav-item mb-2"
+              class="nav-item mb-2 active"
               onclick="window.location.href='../education-page/index.html'"
             >
               <a
@@ -249,7 +247,9 @@
                         Muhammad Fajrul Khaq</a
                       >
                     </li>
-                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
                     <li>
                       <a class="dropdown-item" href="#"
                         ><img
@@ -278,79 +278,138 @@
               </div>
             </div>
           </header>
+        </div>
 
-          <section class="m-3 hero">
-            <img src="assets/img/hero.png" alt="" />
-          </section>
-
-          <section
-            class="ms-3 mt-5 dashboard-description d-flex justify-content-between"
-          >
-            <div class="d-flex flex-column">
-              <h2>Hai Sobat UMKM!!</h2>
-              <h3>Sudah Siap Mengatur Usahamu Hari Ini?</h3>
-              <h3>Yuk Mulai Mengatur Usahamu</h3>
-            </div>
-            <div>
-              <div id="calendar"></div>
-            </div>
-          </section>
-
-          <section
-            class="mt-5 d-flex gap-3 justify-content-center dashboard-card"
-          >
-            <div class="card" style="width: 264px">
-              <div class="card-body">
+        <!-- Article Page -->
+        <div class="container main-container mt-5 article-page">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <a href="./money-management.html">
                 <img
-                  src="assets/img/icons/pemasukan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
+                  src="./assets/img/categories/arrow.png"
+                  alt="Image"
+                  width="40"
                 />
-                <h5 class="card-title mt-3">Pemasukan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Rp. 300.000</p>
+              </a>
+            </div>
+
+            <div class="col-md-12">
+              <h1 class="text-center display-4 color">
+                Panduan Keuangan Pribadi: Bagaimana Mengelola Uang Anda dengan
+                Bijak
+              </h1>
+            </div>
+          </div>
+
+          <div class="container mt-5 text-center">
+            <img
+              loading="lazy"
+              src="./assets/img/categories/money-image.png"
+              class="img-fluid w-75"
+              alt="Image 2"
+            />
+          </div>
+
+          <div class="container mt-5">
+            <div class="row g-5 flex-md-nowrap">
+              <div class="col-md-6">
+                <img
+                  loading="lazy"
+                  src="./assets/img/article-image/none.svg"
+                  class="img-fluid rounded w-75"
+                  alt="Image 3"
+                />
+              </div>
+              <div class="col-md-6 border-bottom">
+                <h2 class="color">1. Menetapkan Anggaran</h2>
+                <p class="lead">
+                  Menjadi penguasa keuangan pribadi adalah kunci kesuksesan
+                  finansial. Kami mengundang Anda ke dalam panduan eksklusif ini
+                  untuk mengungkap rahasia mengelola uang Anda dengan bijak.
+                  <br />
+                  Langkah pertama adalah menetapkan anggaran yang sesuai. Anda
+                  akan memahami bagaimana mengidentifikasi pendapatan Anda,
+                  mencatat pengeluaran, dan merancang anggaran yang akan
+                  membantu Anda mencapai tujuan finansial Anda, seperti menabung
+                  dan berinvestasi.
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="card" style="width: 264px">
-              <div class="card-body">
+          <div class="container mt-5">
+            <div class="row g-5 flex-md-nowrap">
+              <div class="col-md-6 border-bottom">
+                <h2 class="color">2. Membangun Dana Darurat</h2>
+                <p class="lead">
+                  Selain menetapkan anggaran, Anda juga akan mempelajari cara
+                  penting untuk membangun dana darurat yang melindungi Anda dari
+                  keadaan darurat. Temukan tujuan dan langkah praktis untuk
+                  mulai menabung setiap bulan.
+                </p>
+              </div>
+              <div class="col-md-6">
                 <img
-                  src="assets/img/icons/stok.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
+                  loading="lazy"
+                  src="./assets/img/article-image/money-bag.png"
+                  class="img-fluid rounded w-75"
+                  alt="Image 4"
                 />
-                <h5 class="card-title mt-3">Sisah Stok Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
               </div>
             </div>
+          </div>
 
-            <div class="card" style="width: 264px">
-              <div class="card-body">
+          <div class="container mt-5">
+            <div class="row g-5 flex-md-nowrap">
+              <div class="col-md-6">
                 <img
-                  src="assets/img/icons/jumlah-penjualan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
+                  loading="lazy"
+                  src="./assets/img/article-image/money-eyes.png"
+                  class="img-fluid rounded w-75"
+                  alt="Image 5"
                 />
-                <h5 class="card-title mt-3">Jumlah Penjualan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
+              </div>
+              <div class="col-md-6 border-bottom">
+                <h2 class="color">3. Mengendalikan Utang</h2>
+                <p class="lead">
+                  Mengelola utang adalah bagian penting dalam panduan ini. Anda
+                  akan belajar cara mengidentifikasi, menghitung, dan mengatur
+                  utang Anda. Kami akan membagikan strategi efektif untuk
+                  melunasi utang, seperti "bola salju" atau "avalanche."
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="card" style="width: 264px">
-              <div class="card-body">
+          <div class="container mt-5 text-center">
+            <div class="g-5">
+              <img
+                loading="lazy"
+                src="./assets/img/article-image/money-kingdom.png"
+                class="img-fluid rounded banner"
+                alt="Image 6"
+              />
+              <div class="col-md-6 mx-auto mt-3 w-75">
                 <img
-                  src="assets/img/icons/jumlah-pelanggan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
+                  loading="lazy"
+                  src="./assets/img/article-image/block-quotes.svg"
+                  class="img-fluid rounded mt-3"
+                  alt="Image 7"
                 />
-                <h5 class="card-title mt-3">Jumlah Pelanggan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Orang. 2</p>
+                <blockquote class="blockquote">
+                  <p class="mb-0">
+                    "Don't save what is left after spending; spend what is left
+                    after saving."
+                  </p>
+                  <p class="blockquote-footer mt-1 mb-4">Warren Buffett</p>
+                </blockquote>
+                <p class="mt-3">
+                  Mengatur keuangan pribadi membutuhkan disiplin, perencanaan,
+                  dan pemahaman yang baik tentang investasi dan pajak.
+                </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
 
         <hr class="mt-5" />

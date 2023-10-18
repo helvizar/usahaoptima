@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Edukasi</title>
 
     <!-- File CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -16,9 +16,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- CDN Full Calender -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
-
     <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
@@ -28,6 +25,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <main>
       <aside>
@@ -40,7 +38,7 @@
             <li class="nav-item mb-2">
               <a
                 class="nav-link collapsed"
-                href="#"
+                href="../dashboard-page/index.html"
                 data-toggle="collapse"
                 data-target="#collapseTwo"
                 aria-expanded="true"
@@ -83,7 +81,7 @@
             </li>
 
             <li
-              class="nav-item mb-2"
+              class="nav-item mb-2 active"
               onclick="window.location.href='../education-page/index.html'"
             >
               <a
@@ -249,7 +247,9 @@
                         Muhammad Fajrul Khaq</a
                       >
                     </li>
-                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
                     <li>
                       <a class="dropdown-item" href="#"
                         ><img
@@ -278,79 +278,29 @@
               </div>
             </div>
           </header>
+        </div>
 
-          <section class="m-3 hero">
-            <img src="assets/img/hero.png" alt="" />
-          </section>
+        <!-- Money Management Page -->
 
-          <section
-            class="ms-3 mt-5 dashboard-description d-flex justify-content-between"
-          >
-            <div class="d-flex flex-column">
-              <h2>Hai Sobat UMKM!!</h2>
-              <h3>Sudah Siap Mengatur Usahamu Hari Ini?</h3>
-              <h3>Yuk Mulai Mengatur Usahamu</h3>
+        <div class="container mt-5">
+          <div class="row justify-content-between">
+            <a href="./index.html">
+              <img
+                src="./assets/img/categories/arrow.png"
+                alt="Image"
+                width="40"
+              />
+            </a>
+            <div class="col-md-12">
+              <h1 class="text-center display-2 color">Manajemen Keuangan</h1>
             </div>
-            <div>
-              <div id="calendar"></div>
-            </div>
-          </section>
+          </div>
+        </div>
 
-          <section
-            class="mt-5 d-flex gap-3 justify-content-center dashboard-card"
-          >
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/pemasukan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Pemasukan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Rp. 300.000</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/stok.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Sisah Stok Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/jumlah-penjualan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Jumlah Penjualan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/jumlah-pelanggan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Jumlah Pelanggan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Orang. 2</p>
-              </div>
-            </div>
-          </section>
+        <div class="container mt-5 px-2">
+          <div class="row" id="article-list">
+            <!--  -->
+          </div>
         </div>
 
         <hr class="mt-5" />

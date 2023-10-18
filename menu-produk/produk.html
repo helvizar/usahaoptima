@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Menu Produk</title>
 
     <!-- File CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -28,6 +28,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <main>
       <aside>
@@ -37,7 +38,10 @@
           </a>
           <hr />
           <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item mb-2">
+            <li
+              class="nav-item mb-2"
+              onclick="window.location.href='../dashboard-page/index.html'"
+            >
               <a
                 class="nav-link collapsed"
                 href="#"
@@ -51,10 +55,7 @@
               </a>
             </li>
 
-            <li
-              class="nav-item mb-2"
-              onclick="window.location.href='../menu-produk/produk.html'"
-            >
+            <li class="nav-item mb-2 active">
               <a
                 class="nav-link collapsed"
                 href="#"
@@ -249,7 +250,9 @@
                         Muhammad Fajrul Khaq</a
                       >
                     </li>
-                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
                     <li>
                       <a class="dropdown-item" href="#"
                         ><img
@@ -278,82 +281,50 @@
               </div>
             </div>
           </header>
-
-          <section class="m-3 hero">
-            <img src="assets/img/hero.png" alt="" />
-          </section>
-
-          <section
-            class="ms-3 mt-5 dashboard-description d-flex justify-content-between"
-          >
-            <div class="d-flex flex-column">
-              <h2>Hai Sobat UMKM!!</h2>
-              <h3>Sudah Siap Mengatur Usahamu Hari Ini?</h3>
-              <h3>Yuk Mulai Mengatur Usahamu</h3>
-            </div>
-            <div>
-              <div id="calendar"></div>
-            </div>
-          </section>
-
-          <section
-            class="mt-5 d-flex gap-3 justify-content-center dashboard-card"
-          >
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/pemasukan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Pemasukan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Rp. 300.000</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/stok.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Sisah Stok Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/jumlah-penjualan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Jumlah Penjualan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Pcs. 30</p>
-              </div>
-            </div>
-
-            <div class="card" style="width: 264px">
-              <div class="card-body">
-                <img
-                  src="assets/img/icons/jumlah-pelanggan.png"
-                  alt=""
-                  class="img-fluid mx-auto d-block"
-                />
-                <h5 class="card-title mt-3">Jumlah Pelanggan Hari Ini</h5>
-                <h6 class="card-subtitle mb-2">Jumat 8 September 2023</h6>
-                <p>Orang. 2</p>
-              </div>
-            </div>
-          </section>
         </div>
 
-        <hr class="mt-5" />
+        <!-- Menu Produk Page -->
+        <section id="produk" class="mt-4">
+          <div class="produk-button">
+            <button onclick="window.location.href='produk-form.html'">
+              Tambah Produk
+            </button>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div id="loading" class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <div class="section-content">
+            <table class="table table-hover mt-4">
+              <thead>
+                <tr>
+                  <th scope="col" class="th">#</th>
+                  <th scope="col" class="th">Nama Produk</th>
+                  <th scope="col" class="th">Harga Produk</th>
+                  <th scope="col" class="th">Stok Produk</th>
+                  <th scope="col" class="th">Action</th>
+                </tr>
+              </thead>
+              <tbody id="product"></tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end gap-3 m-3">
+                <li id="previous" class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li id="next" class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <hr class="hr" />
 
         <footer class="m-3 text-center d-flex justify-content-between">
           <div class="footer-title">
@@ -386,6 +357,6 @@
     ></script>
 
     <!-- File JS -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/produk.js"></script>
   </body>
 </html>
