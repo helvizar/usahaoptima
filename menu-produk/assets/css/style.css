@@ -60,6 +60,10 @@ main section#dashboard {
   margin-inline: auto;
 }
 
+.section-content {
+  height: 70vh;
+}
+
 main section#dashboard header div.dashboard-search {
   background-color: #f6f1f1;
   padding: 8px;
@@ -86,6 +90,10 @@ main section#dashboard .dashboard-card h5,
 h6,
 p {
   color: var(--secondary) !important;
+}
+
+.hr {
+  margin-top: 10%;
 }
 
 /* Footer Start */
@@ -198,6 +206,10 @@ section#produk table thead th.th {
 
   section#produk .produk-button button {
     margin: 12px;
+  }
+
+  .section-content {
+    height: 100vh;
   }
 }
 
