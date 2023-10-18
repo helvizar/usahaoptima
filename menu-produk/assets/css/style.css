@@ -231,6 +231,10 @@ section#produk table thead th.th {
   .section-content {
     height: 100vh;
   }
+
+  .hr {
+    margin-top: 150px !important;
+  }
 }
 
 /*`md` applies to small devices (landscape phones, less than 768px) */
