@@ -164,6 +164,26 @@ section#produk table thead th.th {
   margin: 6px;
 }
 
+/* Form */
+.btn-form {
+  background-color: var(--primary);
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  color: var(--bg);
+}
+
+.section-content-title {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.label-title {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+}
+
 /* Media Query */
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
