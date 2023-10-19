@@ -11,7 +11,20 @@ const username = localStorage.getItem("username");
 
 // Memasukkan data ke dalam elemen dengan id "usernamePlaceholder"
 const usernamePlaceholder = document.getElementById("usernamePlaceholder");
-if (username && usernamePlaceholder) {
+// if (username && usernamePlaceholder) {
+//   usernamePlaceholder.textContent = username;
+// }
+if (!username) {
+  Swal.fire({
+    icon: "error",
+    title: "Opps!",
+    text: "Sepertinya anda belum melakukan login",
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = '../login-register-page/index.html'; 
+    }
+  })
+} else {
   usernamePlaceholder.textContent = username;
 }
 
