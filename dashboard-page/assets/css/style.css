@@ -52,6 +52,11 @@ main aside ul div.aside-dropdown .aside-list:hover {
   font-weight: bolder !important;
 }
 
+main aside ul li .link-dashboard {
+  background-color: var(--secondary) !important;
+  color: var(--bg) !important;
+}
+
 /* Aside End */
 
 /* Dashboard Start */
