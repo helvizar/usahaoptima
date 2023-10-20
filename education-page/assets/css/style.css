@@ -233,6 +233,14 @@ main aside ul li.active a {
   order: 1;
 }
 
+.article-title {
+  transition: color 0.3s !important;
+}
+
+.article-title:hover {
+  color: var(--secondary) !important;
+}
+
 /* Education Article End */
 
 /* Education Article Page Start */

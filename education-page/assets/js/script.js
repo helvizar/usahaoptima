@@ -44,9 +44,10 @@ function displayArticles(articles) {
       <div class="cards mb-5">
         <img src="${article.images[0].titleImg}" alt="Image" class="card-img-top rounded">
         <div class="card-body">
-          <a class="text-decoration-none" href=${article.articleUrl}>
-            <h2 class="card-title text-center text-decoration-none title mb-2">${article.title}</h2>
-          </a>
+        <a class="text-decoration-none article-title" href="${article.articleUrl}">
+        <h2 class="card-title text-center text-decoration-none title mb-2 article-title">${article.title}</h2>
+      </a>
+      
           <p class="description">${description}</p>
           <p class="pub-date">${pubDate} <span>Author: Dick Mullen</span></p>
         </div>
